@@ -21,6 +21,8 @@ return new class extends Migration
             $table->timestamp('date')->nullable();
             $table->unsignedInteger('category_id'); //Relacion con categoria.
             $table->foreign('category_id')->references('id')->on('categories');
+            $table->unsignedInteger('user_id'); //Relacion con usuario.
+            $table->foreign('user_id')->references('id')->on('users');
             $table->timestamps();
         });
     }
