@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create('books', function (Blueprint $table) {
             $table->increments('id');
             $table->string('title');
-            $table->mediumText('discription');
+            $table->mediumText('description');
             $table->mediumText('content');
             $table->timestamp('date')->nullable();
             $table->unsignedInteger('category_id'); //Relacion con categoria.

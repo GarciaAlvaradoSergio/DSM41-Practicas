@@ -3,6 +3,8 @@
 namespace Database\Factories;
 
 use App\Models\Book;
+use App\Models\Category;
+use App\Models\User;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -23,6 +25,7 @@ class BookFactory extends Factory
             'content' => $this->faker->paragraph(),
             'date' => $this->faker->date($format = 'Y-m-d'),
             'category_id' => Category::all()->random()->id,
+            'user_id' => Category::all()->random()->id,
         ];
     }
 }
