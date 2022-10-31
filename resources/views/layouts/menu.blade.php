@@ -24,7 +24,7 @@
 </li>
 <!-- Nav Item - Dashboard -->
 <li class="nav-item active1">
-    <a class="nav-link" href="/">
+    <a class="nav-link" href="/books">
     <i class="fa-solid fa-book"></i>
     <span>Libros</span></a>
 </li>

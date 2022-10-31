@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\StoreBookRequest;
 use App\Http\Requests\UpdateBookRequest;
+use Illuminate\Http\Response;
+/* Mandamos a llamar nuestro modelo  */
 use App\Models\Book;
 
 class BookController extends Controller
@@ -15,7 +17,9 @@ class BookController extends Controller
      */
     public function index()
     {
-        //
+        $books = Book::all();
+        //return $books;
+        return view('books.index', compact('books'));
     }
 
     /**
@@ -45,9 +49,11 @@ class BookController extends Controller
      * @param  \App\Models\Book  $book
      * @return \Illuminate\Http\Response
      */
-    public function show(Book $book)
+    public function show($id)
     {
-        //
+        $book = Book::find($id);
+        //dd($book);
+        return view ('books.show', compact('book'));
     }
 
     /**
