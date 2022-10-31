@@ -15,4 +15,11 @@ class Book extends Model
         return $this->belongsToMany(Tag::class); //Pertenece a Muchas a muchas etiquetas.
     }
 
+    protected $fillable = [
+        'title',
+        'description',
+        'content',
+        'date'
+        ];
+
 }

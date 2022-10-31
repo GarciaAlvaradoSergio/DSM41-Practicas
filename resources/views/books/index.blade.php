@@ -59,7 +59,7 @@
                         <div class="card-header py-3">
                             <h3 class="m-1 font-weight-bold text-primary">Lista de libros</h3>
                             <div class="d-flex justify-content-end">
-                                    <a class="btn btn-primary" href=""><i class="fa-solid fa-layer-group"></i></a>
+                                    <a class="btn btn-primary" href="books/create"><i class="fa-solid fa-layer-group"></i></a>
                             </div>
                         </div>
                         <div class="card-body">

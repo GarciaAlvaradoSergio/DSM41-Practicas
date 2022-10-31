@@ -23,3 +23,4 @@ Route::get('mivista', function (){
 });
 
 Route::resource('books', BookController::class);
+Route::post('/books/add', [BookController::class, 'store'])->name('books.store');
