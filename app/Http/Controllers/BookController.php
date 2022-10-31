@@ -41,7 +41,7 @@ class BookController extends Controller
     public function store(StoreBookRequest $request)
     {
         $books = Book::create($request->only('title', 'description', 'content','date'));
-        return redirect()->route('books.show', $books->id)->with('success', 'Usuario creado correctamente');
+        return redirect()->route('books.show', $books->id)->with('success', 'Libro creado correctamente');
     }
 
     /**
