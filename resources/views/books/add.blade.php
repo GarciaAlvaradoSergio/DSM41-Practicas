@@ -61,7 +61,7 @@
               <div class="row">
                 <label for="content" class="col-sm-2 col-form-label">Contenido</label>
                 <div class="col-sm-7">
-                  <input type="text" class="form-control" name="content" placeholder="Ingrese su correo" value="{{ old('email') }}">
+                  <input type="text" class="form-control" name="content" placeholder="Ingrese su contenido" value="{{ old('email') }}">
                   @if ($errors->has('content'))
                     <span class="error text-danger" for="input-content">{{ $errors->first('content') }}</span>
                   @endif
