@@ -30,7 +30,7 @@
 </li>
 <!-- Nav Item - Dashboard -->
 <li class="nav-item active2">
-    <a class="nav-link" href="/">
+    <a class="nav-link" href="/users">
     <i class="fa-sharp fa-solid fa-users"></i>       
     <span>Estudiantes</span></a>
 </li>

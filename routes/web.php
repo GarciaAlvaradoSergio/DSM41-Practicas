@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BookController;
+use App\Http\Controllers\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,3 +25,5 @@ Route::get('mivista', function (){
 
 Route::resource('books', BookController::class);
 Route::post('/books/add', [BookController::class, 'store'])->name('books.store');
+
+Route::resource('users', UserController::class);
