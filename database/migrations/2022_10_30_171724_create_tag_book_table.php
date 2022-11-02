@@ -20,6 +20,7 @@ return new class extends Migration
             $table->unsignedInteger('tag_id');
             $table->foreign('tag_id')->references('id')->on('tags')->onDelete('cascade');
             $table->timestamps();
+            $table->SoftDeletes();
         });
     }
 
