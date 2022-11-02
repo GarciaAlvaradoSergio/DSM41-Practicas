@@ -20,9 +20,9 @@ return new class extends Migration
             $table->mediumText('content');
             $table->timestamp('date')->nullable();
             $table->unsignedInteger('category_id')->nullable(); //Relacion con categoria.
-            $table->foreign('category_id')->references('id')->on('categories')->onDelete('cascade');;
+            $table->foreign('category_id')->references('id')->on('categories')->onDelete('cascade');
             $table->unsignedInteger('user_id')->nullable(); //Relacion con usuario.
-            $table->foreign('user_id')->references('id')->on('users');
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->timestamps();
             $table->SoftDeletes();
         });
