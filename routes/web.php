@@ -27,3 +27,4 @@ Route::resource('books', BookController::class);
 Route::post('/books/add', [BookController::class, 'store'])->name('books.store');
 
 Route::resource('users', UserController::class);
+Route::post('/users/add', [UserController::class, 'store'])->name('users.store');

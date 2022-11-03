@@ -26,7 +26,7 @@ class UserController extends Controller
      */
     public function create()
     {
-        //
+        return view('users.add');
     }
 
     /**
@@ -37,7 +37,8 @@ class UserController extends Controller
      */
     public function store(StoreUserRequest $request)
     {
-        //
+        $users = User::create($request->only('name', 'lastname', 'email','password'));
+        return redirect()->route('users.show', $users->id)->with('success', 'Estudiante creado correctamente');
     }
 
     /**
