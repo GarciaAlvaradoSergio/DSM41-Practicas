@@ -12,9 +12,7 @@
 
 <!-- Page Heading -->
 <div class="d-sm-flex align-items-center justify-content-between mb-4">
-    <h1 class="h3 mb-0 text-gray-800">Estudiante Altas</h1>
-    <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
-            class="fas fa-download fa-sm text-white-50"></i> Generar reporte</a>
+    <h1 class="h3 mb-0 text-gray-800">Estudiantes Altas</h1>
 </div>
 
 
@@ -44,13 +42,13 @@
                 <label for="name" class="col-sm-2 col-form-label">Nombre</label>
                 <div class="col-sm-7">
                   <input type="text" class="form-control" name="name" placeholder="Ingrese su nombre" value="{{ old('name') }}" autofocus>
-                  @if ($errors->has('titnamele'))
+                  @if ($errors->has('name'))
                     <span class="error text-danger" for="input-name">{{ $errors->first('name') }}</span>
                   @endif
                 </div>
               </div>
               <div class="row">
-                <label for="description" class="col-sm-2 col-form-label">Apellido</label>
+                <label for="lastname" class="col-sm-2 col-form-label">Apellido</label>
                 <div class="col-sm-7">
                   <input type="text" class="form-control" name="lastname" placeholder="Ingrese su apellido" value="{{ old('lastname') }}">
                   @if ($errors->has('lastname'))
@@ -59,7 +57,7 @@
                 </div>
               </div>
               <div class="row">
-                <label for="content" class="col-sm-2 col-form-label">Correo</label>
+                <label for="email" class="col-sm-2 col-form-label">Correo electronico</label>
                 <div class="col-sm-7">
                   <input type="email" class="form-control" name="email" placeholder="Ingrese su correo" value="{{ old('email') }}">
                   @if ($errors->has('email'))
@@ -70,7 +68,7 @@
               <div class="row">
                 <label for="password" class="col-sm-2 col-form-label">Contraseña</label>
                 <div class="col-sm-7">
-                  <input type="password" class="form-control" name="password">
+                  <input type="password" class="form-control" placeholder="Ingrese su contraseña" name="password">
                   @if ($errors->has('password'))
                     <span class="error text-danger" for="input-password">{{ $errors->first('password') }}</span>
                   @endif
