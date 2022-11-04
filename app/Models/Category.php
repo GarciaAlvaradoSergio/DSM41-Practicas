@@ -11,4 +11,7 @@ class Category extends Model
     public function libros(){
         return $this->hasOne(Book::class);
     }
+    protected $fillable = [
+        'name'
+        ];
 }

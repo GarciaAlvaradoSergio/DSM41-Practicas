@@ -15,7 +15,9 @@ class CategoryController extends Controller
      */
     public function index()
     {
-        //
+        $categories = Category::all();
+        //return $categories;
+        return view('categories.index', compact('categories'));
     }
 
     /**
@@ -25,7 +27,7 @@ class CategoryController extends Controller
      */
     public function create()
     {
-        //
+        return view('categories.add');
     }
 
     /**
@@ -36,7 +38,8 @@ class CategoryController extends Controller
      */
     public function store(StoreCategoryRequest $request)
     {
-        //
+        $categories = Category::create($request->only('name'));
+        return redirect()->route('categories.show', $categories->id)->with('success', 'Libro creado correctamente');
     }
 
     /**
@@ -45,9 +48,11 @@ class CategoryController extends Controller
      * @param  \App\Models\Category  $category
      * @return \Illuminate\Http\Response
      */
-    public function show(Category $category)
+    public function show($id)
     {
-        //
+        $category = Category::find($id);
+        //dd($category);
+        return view ('categories.show', compact('category'));
     }
 
     /**

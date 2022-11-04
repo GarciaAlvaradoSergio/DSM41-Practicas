@@ -36,7 +36,7 @@
 </li>
 <!-- Nav Item - Dashboard -->
 <li class="nav-item active3">
-    <a class="nav-link" href="/">
+    <a class="nav-link" href="/categories">
     <i class="fa-solid fa-tags"></i>
     <span>Categorias</span></a>
 </li>

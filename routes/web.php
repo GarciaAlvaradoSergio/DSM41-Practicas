@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BookController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\CategoryController;
 
 /*
 |--------------------------------------------------------------------------
@@ -28,3 +29,6 @@ Route::post('/books/add', [BookController::class, 'store'])->name('books.store')
 
 Route::resource('users', UserController::class);
 Route::post('/users/add', [UserController::class, 'store'])->name('users.store');
+
+Route::resource('categories', CategoryController::class);
+Route::post('categories/add', [CategoryController::class, 'store'])->name('categories.store');
