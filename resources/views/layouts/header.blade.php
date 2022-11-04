@@ -20,7 +20,8 @@
         <script src="https://kit.fontawesome.com/3aafa2d207.js" crossorigin="anonymous"></script>
     <!-- Custom styles for this template-->
     <link href="{{asset('css/sb-admin-2.min.css')}}" rel="stylesheet">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+    <link href="{{asset('css/nota.css')}}" rel="stylesheet">
 </head>
 <body id="page-top">
  
