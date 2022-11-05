@@ -4,11 +4,13 @@
 <!-- Begin Page Content -->
 <div class="container-fluid">
   <div class="search-box">
-    <input type="text" placeholder="Titulo..." class="search-input" />
-    <input type="text" placeholder="Crear una nota..." class="search-input-note" />
+    <form action="" method="post">
+    <input type="text" placeholder="Titulo..." class="search-input"  name=""/>
+    <input type="text" placeholder="Crear una nota..." class="search-input-note" name=""autofocus/>
     <a href="#" class="search-btn">
       <i class="fa-solid fa-pen-to-square"></i>
     </a>
+    </form>
   </div>
 
 
