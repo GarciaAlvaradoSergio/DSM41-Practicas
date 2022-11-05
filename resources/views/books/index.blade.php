@@ -72,6 +72,8 @@
                                             <th>Titulo</th>
                                             <th>Descripcion</th>
                                             <th>Contenido</th>
+                                            <th>Categoria</th>
+                                            <th>Nombre</th>
                                             <th>Operaciones</th>
                                         </tr>
                                     </thead>
@@ -81,16 +83,21 @@
                                             <th>Titulo</th>
                                             <th>Descripcion</th>
                                             <th>Contenido</th>
+                                            <th>Categoria</th>
+                                            <th>Nombre</th>
                                             <th>Operaciones</th>
                                         </tr>
                                     </tfoot>
                                     <tbody>
-                                    @foreach($books as $book)
+                                    @forelse($books as $book)
                                         <tr>
                                             <td>{{$book->id}}</td>
                                             <td>{{$book->title}}</td>
                                             <td>{{$book->description}}</td>
                                             <td>{{$book->content}}</td>
+                                            <td>{{$book->categoria->name}}</td>
+                                            <td>{{$book->estudiante->name}}</td>
+                                            
                                             <td>
                                             <div class="btn-group me-2" role="group" aria-label="First group">
                                                 <div class="contenedor"><a href="books/{{$book->id}}">
@@ -103,10 +110,10 @@
                                                 <button type="button" class="btn btn-danger"><i class="fa-solid fa-trash"></i></button>
                                                 </a></div>
                                             </div>
-                                           
+                                           @empty
                                             </td>
                                         </tr>
-                                        @endforeach
+                                    @endforelse
                                         
                                     </tbody>
                                 </table>
