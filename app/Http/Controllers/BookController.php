@@ -7,6 +7,8 @@ use App\Http\Requests\UpdateBookRequest;
 use Illuminate\Http\Response;
 /* Mandamos a llamar nuestro modelo  */
 use App\Models\Book;
+use App\Models\Category;
+use App\Models\User;
 
 class BookController extends Controller
 {
@@ -17,6 +19,7 @@ class BookController extends Controller
      */
     public function index()
     {
+        
         $books = Book::all();
         //return $books;
         return view('books.index', compact('books'));
@@ -29,7 +32,9 @@ class BookController extends Controller
      */
     public function create()
     {
-        return view('books.add');
+        $categories = Category::all();
+        $users = User::get();
+        return view('books.add', compact('categories','users'));
     }
 
     /**
@@ -40,7 +45,8 @@ class BookController extends Controller
      */
     public function store(StoreBookRequest $request)
     {
-        $books = Book::create($request->only('title', 'description', 'content','date'));
+        //$books = Book::create($request->only('title', 'description', 'content','date'));
+        $books = Book::create($request->all());
         return redirect()->route('books.show', $books->id)->with('success', 'Libro creado correctamente');
     }
 
