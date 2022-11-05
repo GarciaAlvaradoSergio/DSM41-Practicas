@@ -8,9 +8,10 @@ use Illuminate\Database\Eloquent\Model;
 class Category extends Model
 {
     use HasFactory;
-    public function libros(){
-        return $this->hasOne(Book::class);
+    public function libro(){
+        return $this->belongsTo(Book::class); //Pertenece a una categoria.
     }
+
     protected $fillable = [
         'name'
         ];

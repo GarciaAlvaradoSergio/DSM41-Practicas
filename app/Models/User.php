@@ -14,4 +14,7 @@ class User extends Model
         'email',
         'password'
     ];
+    public function libro(){
+        return $this->belongsTo(Book::class); //Pertenece a una categoria.
+    }
 }

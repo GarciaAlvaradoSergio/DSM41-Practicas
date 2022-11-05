@@ -11,8 +11,12 @@ class Book extends Model
     use HasFactory, SoftDeletes;
     
     public function categoria(){
-        return $this->belongsTo(Category::class); //Pertenece a una categoria.
+        return $this->hasOne(Category::class, 'id', 'category_id'  );
     }
+    public function estudiante(){
+        return $this->hasOne(User::class, 'id','user_id');
+    }
+
     public function etiquetas(){
         return $this->belongsToMany(Tag::class); //Pertenece a Muchas a muchas etiquetas.
     }
@@ -21,7 +25,9 @@ class Book extends Model
         'title',
         'description',
         'content',
-        'date'
+        'date',
+        'category_id',
+        'user_id'
         ];
 
 }
