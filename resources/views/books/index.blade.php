@@ -19,7 +19,13 @@
 
 <!-- Content Row -->
 
-
+          <!--body-->
+          <div class="card-body">
+            @if (session('message'))
+            <div class="alert alert-success" role="success">
+              {{ session('message') }}
+            </div>
+            @endif
 
 <!-- Content Row -->
 <div class="row">
@@ -101,7 +107,7 @@
                                                 <div class="contenedor"><a href="books/{{$book->id}}">
                                                 <button type="button" class="btn btn-success"><i class="fa-regular fa-eye"></i></button>
                                                 </a></div>
-                                                <div class="contenedor"><a href="">
+                                                <div class="contenedor"><a href="books/{{$book->id}}/edit">
                                                 <button type="button" class="btn btn-warning"><i class="fa-solid fa-pen-to-square"></i></button>
                                                 </a></div>
                                                 <div class="contenedor"><a href="">

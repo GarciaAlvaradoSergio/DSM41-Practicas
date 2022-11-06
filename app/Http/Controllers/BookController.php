@@ -69,9 +69,12 @@ class BookController extends Controller
      * @param  \App\Models\Book  $book
      * @return \Illuminate\Http\Response
      */
-    public function edit(Book $book)
+    public function edit($id)
     {
-        //
+        $categories = Category::all('id','name');
+        $students = User::all('id','name');
+        $book = Book::find($id);
+        return view('books.edit', compact('categories','students'))->with('book', $book);
     }
 
     /**
@@ -81,9 +84,12 @@ class BookController extends Controller
      * @param  \App\Models\Book  $book
      * @return \Illuminate\Http\Response
      */
-    public function update(UpdateBookRequest $request, Book $book)
+    public function update(UpdateBookRequest $request, $id)
     {
-        //
+        $book = Book::find($id);
+        $input=$request->all();
+        $book->update($input);
+        return redirect('books')->with('message','Se ha actualizado el registro correctamente');
     }
 
     /**
