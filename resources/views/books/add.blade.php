@@ -13,8 +13,6 @@
   <!-- Page Heading -->
   <div class="d-sm-flex align-items-center justify-content-between mb-4">
     <h1 class="h3 mb-0 text-gray-800">Libro Altas</h1>
-    <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
-        class="fas fa-download fa-sm text-white-50"></i> Generate Report</a>
   </div>
 
 
@@ -64,7 +62,7 @@
                   <label for="content" class="col-sm-2 col-form-label">Contenido</label>
                   <div class="col-sm-7">
                     <input type="text" class="form-control" name="content" placeholder="Ingrese su contenido"
-                      value="{{ old('email') }}">
+                      value="{{ old('content') }}">
                     @if ($errors->has('content'))
                     <span class="error text-danger" for="input-content">{{ $errors->first('content') }}</span>
                     @endif
@@ -101,6 +99,7 @@
               <div class="card-footer ml-auto mr-auto">
                 <button type="submit" class="btn btn-primary">Guardar</button>
               </div>
+            </div>
               <!--End footer-->
             </div>
           </form>

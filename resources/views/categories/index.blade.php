@@ -69,7 +69,7 @@
                                             <th>ID</th>
                                             <th>Nombre</th>
                                             <th>Creado</th>
-                                            <th>Actualiacion</th>
+                                            <th>Actualización</th>
                                             <th>Operaciones</th>
                                         </tr>
                                     </thead>
@@ -78,7 +78,7 @@
                                             <th>ID</th>
                                             <th>Nombre</th>
                                             <th>Creado</th>
-                                            <th>Actualiacion</th>
+                                            <th>Actualización</th>
                                             <th>Operaciones</th>
                                         </tr>
                                     </tfoot>

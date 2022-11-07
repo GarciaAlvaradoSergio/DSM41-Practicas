@@ -61,7 +61,7 @@
                 <!-- DataTales Example -->
                 <div class="card shadow mb-4">
                         <div class="card-header py-3">
-                            <h3 class="m-1 font-weight-bold text-primary">Lista de libros</h3>
+                            <h3 class="m-1 font-weight-bold text-primary">Lista de libros relacionada con Categoria y Estudiantes</h3>
                             <div class="d-flex justify-content-end">
                                     <a class="btn btn-primary" href="books/create"><i class="fa-solid fa-layer-group"></i></a>
                             </div>
@@ -77,7 +77,7 @@
                                             <th>Descripcion</th>
                                             <th>Contenido</th>
                                             <th>Categoria</th>
-                                            <th>Nombre</th>
+                                            <th>Estudiante</th>
                                             <th>Operaciones</th>
                                         </tr>
                                     </thead>
@@ -88,7 +88,7 @@
                                             <th>Descripcion</th>
                                             <th>Contenido</th>
                                             <th>Categoria</th>
-                                            <th>Nombre</th>
+                                            <th>Estudiante</th>
                                             <th>Operaciones</th>
                                         </tr>
                                     </tfoot>
