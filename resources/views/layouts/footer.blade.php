@@ -54,6 +54,9 @@
     <!-- Page level custom scripts -->
     <script src="js/demo/datatables-demo.js"></script>
 
+    <!-- Iconos -->
+    <script src="https://kit.fontawesome.com/3aafa2d207.js" crossorigin="anonymous"></script>
+
 </body>
 
 </html>
